@@ -19,4 +19,4 @@ console.log(yourTicket);
 
 
 //Output prezzo finale da stampare in pagina html approssimato a due numeri decimali dopo la virgola
-document.getElementById('result').innerHTML = yourTicket;
+document.getElementById('result').innerHTML = yourTicket.toFixed(2);

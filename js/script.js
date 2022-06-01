@@ -16,24 +16,17 @@ const userAge = parseInt( prompt("Scrivi qui l'età del passeggero"));
 console.log(userAge);
 
 //Moltiplicare il prezzo base del bilgietto (0.21 € al km) per il numero dei chilometri
-let baseTicket = userKilometres * 0.21;
-console.log(baseTicket);
+let yourTicket = userKilometres * 0.21;
+console.log(yourTicket);
 
 //Se il passeggero è minorenne applicare lo sconto del 20%
-
-let discountTicketMin;
-
-if (userAge < 18)
-discountTicketMin = baseTicket * 2 / 100;
-console.log(discountTicketMin);
-
-
 //Se il passeggero è over 65 applicare lo sconto del 40%
+if (userAge < 18)
+yourTicket = yourTicket * 2 / 100;
+else if (userAge > 65)
+yourTicket = yourTicket * 4 / 100;
+console.log(yourTicket);
+
+
 //Output prezzo finale da stampare in pagina html approssimato a due numeri decimali dopo la virgola
-
-
-
-
-
-//Stampo il risultato in pagina
-//document.getElementById('result').innerHTML = yourTicket;
+document.getElementById('result').innerHTML = yourTicket;
